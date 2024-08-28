@@ -15,4 +15,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="EntityframeworkFluentAPIs">
+      <HintPath>..\..\..\..\OneDrive\Desktop\EntityframeworkFluentAPIs Solution\EntityframeworkFluentAPIs\bin\Debug\net6.0\EntityframeworkFluentAPIs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

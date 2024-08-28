@@ -4,6 +4,7 @@ using Demo.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Migrations
 {
     [DbContext(typeof(EnterpriseDbContext))]
-    partial class EnterpriseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240827220732_DropDepartmentTable")]
+    partial class DropDepartmentTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,29 +71,6 @@ namespace Demo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Projects");
-                });
-
-            modelBuilder.Entity("EntityframeworkFluentAPIs.Department", b =>
-                {
-                    b.Property<int>("DeptId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DeptId"), 10L, 10);
-
-                    b.Property<DateTime>("DateOfCreation")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)")
-                        .HasDefaultValue("Test")
-                        .HasColumnName("DepartmentName");
-
-                    b.HasKey("DeptId");
-
-                    b.ToTable("Departments");
                 });
 #pragma warning restore 612, 618
         }
