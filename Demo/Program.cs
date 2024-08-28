@@ -9,7 +9,6 @@ namespace Demo
         {
             EnterpriseDbContext dbContext = new EnterpriseDbContext();
             //dbContext.Database.Migrate();
-
         }
     }
 }

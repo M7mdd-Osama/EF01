@@ -8,17 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Entityframeworkcore.sqlserver" Version="6.0.33" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.33" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.33" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.33">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="EntityframeworkFluentAPIs">
-      <HintPath>..\..\..\..\OneDrive\Desktop\EntityframeworkFluentAPIs Solution\EntityframeworkFluentAPIs\bin\Debug\net6.0\EntityframeworkFluentAPIs.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

@@ -31,7 +31,7 @@ namespace Demo.Entities
         [Column(TypeName = "varchar")]
         //[MaxLength(50)]
         [StringLength(50, MinimumLength = 10)]
-        public string? Name { get; set; }
+        public string Name { get; set; }
         //[Column(TypeName = "Money")]
         [DataType(DataType.Currency)]
         public decimal Salary { get; set; }
